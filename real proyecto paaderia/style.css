@@ -1,0 +1,139 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #2c3e50, #3498db);
+    color: #0c0b0b;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- CONTENEDOR PRINCIPAL (FLEXBOX) --- */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* --- CABECERA Y TÍTULO --- */
+.header {
+    background: #1a252f;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- FORMULARIO (COLUMNA IZQUIERDA) --- */
+.form-container {
+    flex: 1;
+    max-width: 40%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+input, button {
+    margin: 8px;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #f1c40f;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* --- TABLA (COLUMNA DERECHA) --- */
+.table-container {
+    flex: 2;
+    max-width: 55%;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+td, th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* --- ALERTA DE PANTALLA COMPLETA --- */
+.fullscreen-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+.fullscreen-alert button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* --- DISEÑO RESPONSIVO (MÓVILES) --- */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .table-container {
+        max-width: 90%;
+    }
+}

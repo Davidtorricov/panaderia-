@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <!-- ENCABEZADO -->
+    <div class="header">
+        <img src="bread-logo-bakery-and-pastry-shop-logo-illustration-vector.jpg">
+        <h1>Gestión de Inventario</h1>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        
+        <!-- FORMULARIO (LADO IZQUIERDO) -->
+        <div class="form-container">
+            <h2>Agregar Producto</h2>
+            <form id="productForm">
+                <input type="text" id="name" placeholder="Nombre del producto" required>
+                <input type="text" id="description" placeholder="Descripción">
+                <input type="number" id="quantity" placeholder="Cantidad disponible" required>
+                <input type="date" id="expiration" required>
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </div>
+
+        <!-- TABLA DE INVENTARIO (LADO DERECHO) -->
+        <div class="table-container">
+            <h2>Inventario</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Fecha de Caducidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productList"></tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <!-- ALERTA DE PANTALLA COMPLETA -->
+    <div id="fullscreenAlert" class="fullscreen-alert">
+        <div>
+            <p id="alertMessage"></p>
+            <button onclick="closeAlert()">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- MÚSICA DE FONDO -->
+    <audio id="backgroundMusic" loop>
+        <source src="2.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
